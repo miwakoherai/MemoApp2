@@ -6,7 +6,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "lint": "eslint --no-error-on-unmatched-pattern src/**/*",
+    "lint:fix": "eslint --fix src/**/*"
   },
   "dependencies": {
     "expo": "~50.0.17",
