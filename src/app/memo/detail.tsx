@@ -2,6 +2,7 @@ import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 import Header from "../../components/Header";
 import CircleButton from "../../components/CircleButton";
+import { AntDesign } from "@expo/vector-icons";
 
 const Detail = (): JSX.Element => {
   return (
@@ -17,7 +18,9 @@ const Detail = (): JSX.Element => {
           本文用なので使い方を間違えるとh自然に見えることもありますので要注意
         </Text>
       </ScrollView>
-      <CircleButton style={{ top: 160, bottom: "auto" }}>+</CircleButton>
+      <CircleButton style={{ top: 160, bottom: "auto" }}>
+        <AntDesign name="plus" size={40} />
+      </CircleButton>
     </View>
   );
 };
