@@ -3,6 +3,7 @@ import { useFonts } from "expo-font";
 
 import fontData from "../../assets/fonts/icomoon.ttf";
 import fontSelection from "../../assets/fonts/selection.json";
+import { PropsWithChildren } from "react";
 
 const CustomIcon = createIconSetFromIcoMoon(
   fontSelection,
@@ -10,14 +11,21 @@ const CustomIcon = createIconSetFromIcoMoon(
   "icomoon.ttf"
 );
 
-const Icon = (): JSX.Element | null => {
+interface Props {
+  name: string;
+  size: number;
+  color: string;
+}
+
+const Icon = (props: Props): JSX.Element | null => {
+  const { name, size, color } = props;
   const [fontLoaded] = useFonts({
     IcoMoon: fontData,
   });
   if (!fontLoaded) {
     return null;
   }
-  return <CustomIcon name="plus" size={40} color="red" />;
+  return <CustomIcon name={name} size={size} color={color} />;
 };
 
 export default Icon;
