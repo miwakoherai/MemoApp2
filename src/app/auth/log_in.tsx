@@ -12,7 +12,7 @@ import Button from "../../components/Button";
 
 const hanlePress = (): void => {
   //ログイン
-  router.push("/memo/list");
+  router.replace("/memo/list");
 };
 
 const LogIn = (): JSX.Element => {
