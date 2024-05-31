@@ -16,8 +16,8 @@ const hanlePress = (): void => {
 };
 
 const LogIn = (): JSX.Element => {
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <View style={styles.container}>
       <View style={styles.inner}>
@@ -28,6 +28,10 @@ const LogIn = (): JSX.Element => {
           onChangeText={(text) => {
             setEmail(text);
           }}
+          autoCapitalize="none"
+          keyboardType="email-address"
+          placeholder="Email_address"
+          textContentType="emailAddress"
         />
         <TextInput
           style={styles.input}
@@ -35,6 +39,10 @@ const LogIn = (): JSX.Element => {
           onChangeText={(text) => {
             setPassword(text);
           }}
+          autoCapitalize="none"
+          secureTextEntry
+          placeholder="Password"
+          textContentType="password"
         />
         <Button label="Submit" onPress={hanlePress} />
         <View style={styles.footer}>
