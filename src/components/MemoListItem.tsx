@@ -21,7 +21,7 @@ const MemoListItem = (props: Props): JSX.Element | null => {
       <TouchableOpacity style={styles.memoListItem}>
         <View>
           <Text numberOfLines={1} style={styles.memoListItemTitle}>
-            {memo.bodyText}
+            {bodyText}
           </Text>
           <Text style={styles.memoListItemDate}>{dateString}</Text>
         </View>
