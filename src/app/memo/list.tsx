@@ -34,9 +34,7 @@ const List = (): JSX.Element => {
       q,
       (snapshot) => {
         const remoteMemos: Memo[] = [];
-        console.log(JSON.stringify(snapshot, null, 2));
         snapshot.forEach((doc) => {
-          console.log("memo", doc.data());
           const { bodyText, updatedAt } = doc.data();
           remoteMemos.push({
             id: doc.id,

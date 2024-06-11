@@ -42,7 +42,6 @@ const Edit = (): JSX.Element => {
     const ref = doc(db, `users/${auth.currentUser.uid}/memos`, id);
     getDoc(ref)
       .then((docRef) => {
-        console.log(docRef.data());
         const remoteBodyText = docRef?.data()?.bodyText;
         setBodyText(remoteBodyText);
       })
